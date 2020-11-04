@@ -1,0 +1,38 @@
+{
+    "name": "mammatus/metrics",
+    "description": "\ud83d\udc19 Metrics Hook-ins",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4",
+        "react-parallel/event-loop": "dev-add-metrics as 1.1.1",
+        "react-parallel/object-proxy": "dev-master",
+        "react-parallel/psr-11-container-proxy": "dev-master",
+        "react-parallel/react-parallel": "dev-add-metrics as 1.1.1",
+        "wyrihaximus/metrics": "dev-master",
+        "wyrihaximus/metrics-tactician": "dev-master"
+    },
+    "require-dev": {
+        "wyrihaximus/async-test-utilities": "^2.3"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.7"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "php-di-definitions": {
+            "di": [
+                "etc/di/*.php"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "composer normalize"
+        ],
+        "post-update-cmd": [
+            "composer normalize"
+        ]
+    }
+}
