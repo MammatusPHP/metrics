@@ -2,13 +2,17 @@
 
 use ReactParallel\Factory;
 use ReactParallel\ObjectProxy\Configuration;
+use ReactParallel\ObjectProxy\Generated\ProxyList;
 use ReactParallel\ObjectProxy\Proxy;
+use ReactParallel\ObjectProxy\ProxyListInterface;
 use WyriHaximus\Metrics\Registry;
 
 return [
-    Proxy::class => static function (Factory $factory, Registry $registry) {
-        $proxy = (new Proxy((new Configuration($factory))->withMetrics(Configuration\Metrics::create($registry))));
-        $proxy->create($registry, Registry::class, true);
+    ProxyListInterface::class => static fn (): ProxyListInterface => new ProxyList(),
+    Configuration::class => static fn (Factory $factory, Registry $registry, ProxyListInterface $proxyList): Configuration => (new Configuration($factory))->withProxyList($proxyList)->withMetrics(Configuration\Metrics::create($registry)),
+    Proxy::class => static function (Configuration $configuration, Registry $registry) {
+        $proxy = new Proxy($configuration);
+        $proxy->share($registry, Registry::class);
 
         return $proxy;
     },
