@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9d4ff83dced6b15e30847212458c909",
+    "content-hash": "a37335461c82ca3bf2fd610ab10593b3",
     "packages": [
         {
             "name": "api-clients/rx",
@@ -2373,6 +2373,58 @@
                 "source": "https://github.com/WyriHaximus/php-pool-info/tree/1.0.0"
             },
             "time": "2019-09-27T06:28:08+00:00"
+        },
+        {
+            "name": "wyrihaximus/psr-3-callable-throwable-logger",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/php-psr-3-callable-throwable-logger.git",
+                "reference": "ad84ed15ee2d72a71cf752e236e90fdd773890fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/php-psr-3-callable-throwable-logger/zipball/ad84ed15ee2d72a71cf752e236e90fdd773890fe",
+                "reference": "ad84ed15ee2d72a71cf752e236e90fdd773890fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4",
+                "psr/log": "^1.0",
+                "thecodingmachine/safe": "^1.0 || ^0.1.16"
+            },
+            "require-dev": {
+                "wyrihaximus/psr-3-utilities": "^1.0",
+                "wyrihaximus/test-utilities": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WyriHaximus\\PSR3\\CallableThrowableLogger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "callable throwable decorator around a PSR-3 logger (to be used with react/promise and reactivex/rxphp)",
+            "support": {
+                "issues": "https://github.com/WyriHaximus/php-psr-3-callable-throwable-logger/issues",
+                "source": "https://github.com/WyriHaximus/php-psr-3-callable-throwable-logger/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-03-21T21:52:11+00:00"
         },
         {
             "name": "wyrihaximus/react-mutex-contracts",

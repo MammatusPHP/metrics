@@ -4,13 +4,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
+        "psr/log": "^1.1",
         "react-parallel/event-loop": "^1.1",
         "react-parallel/object-proxy": "dev-master",
         "react-parallel/psr-11-container-proxy": "dev-master",
         "react-parallel/react-parallel": "^1.1",
         "wyrihaximus/metrics": "^1.0",
         "wyrihaximus/metrics-lazy-registry": "^1.0",
-        "wyrihaximus/metrics-tactician": "^1.0"
+        "wyrihaximus/metrics-tactician": "^1.0",
+        "wyrihaximus/psr-3-callable-throwable-logger": "^2.1"
     },
     "require-dev": {
         "wyrihaximus/async-test-utilities": "^2.3"
